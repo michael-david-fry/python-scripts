@@ -16,6 +16,6 @@ for interface in interfaces:
         # Execute the ping command for the IP address on the current interface
         try:
             subprocess.check_output(['ping', '-I', interface_name, '-c', '1', '-W', '1', ip])
-            print(f'Ping successful: {ip} on {interface_name}')
+            print(f'Successful: {ip} on {interface_name}')
         except subprocess.CalledProcessError:
-            print(f'Ping failed: {ip} on {interface_name}')
+            print(f'Failed:     {ip} on {interface_name}')

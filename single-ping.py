@@ -1,7 +1,10 @@
 import subprocess
 
-# Read the list of IP addresses from an external text file
-with open('ip_list.txt') as f:
+# Define the name of the IP address list text file
+ip_list_file = 'ip_list.txt'
+
+# Read the list of IP addresses from the text file
+with open(ip_list_file) as f:
     ip_list = [line.strip() for line in f]
 
 # Get the list of network interfaces
